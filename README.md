@@ -4,7 +4,7 @@ Turn a Raspberry-Pi in a basic CMS terminal for any DVR/NVR with RTSP capabiliti
 Introduction
 ------------
 
-here are many CMS (Central Management Software) solutions, that allow remotely displaying or controlling DVR/NVR surveillance/CCTV devices.
+There are many CMS (Central Management Software) solutions, that allow remotely displaying or controlling DVR/NVR surveillance/CCTV devices.
 
 In our working environment, the fact that most CMS solutions were MS-Windows based applicationes was a downside, for several reasons:
 
@@ -29,7 +29,7 @@ Hardware setup
 There is feature that allows you to cycle between video modes (matrix or every single channel in full screen) if you press a button connected between pins 5 & 6 (GPIO3 & GND). This is optional.
 
 Setup
-_____
+-----
 
 Disable GUI and any other unnecessary boot option, via raspi-config or any other method.
 
@@ -60,13 +60,22 @@ Help:
 
 Control mode:
 
-            cam.sh reset         Default values will be read/applied and service will be restarted.
-            cam.sh matrix x y    Monitor will display available video streams in a x rows by y columns matrix. 
-                                 If the number of cells is greater than available channels, remaining cells will appear as a black square
-                                 If there are more channels than available cells, they won't be displayed.
-                                 Height and width of every cell will be automatically scaled to fit monitor resolution, as configured in the cam.conf file.
-            cam.sh single n      Specified video channel will be displayed in full screen mode, if available. Max channels setting won't be considered.
-            cam.sh cycle         Display output will cycle between default matrix mode, single channel for every available channel from 1 to max channels.
+            cam.sh reset         Default values will be read/applied and service will 
+                                 be restarted.
+            cam.sh matrix x y    Monitor will display available video streams in a 
+                                 x rows by y columns matrix. 
+                                 If the number of cells is greater than available 
+                                 channels, remaining cells will appear as a black square.
+                                 If there are more channels than available cells, 
+                                 they won't be displayed.
+                                 Height and width of every cell will be automatically 
+                                 scaled to fit monitor resolution, as configured in 
+                                 the cam.conf file.
+            cam.sh single n      Specified video channel will be displayed in full screen 
+                                 mode, if available. Max channels setting is ignored.
+            cam.sh cycle         Display output will cycle between default matrix mode, 
+                                 single channel for every available channel from 
+                                 1 to max channels.
 
 Watchdog and registry file
 --------------------------
