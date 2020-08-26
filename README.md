@@ -26,7 +26,7 @@ Any raspbian based image would do.
 Hardware setup
 --------------
 
-There is feature that allows you to cycle between video modes (matrix or every single channel in full screen) if you press a button connected between pins 5 & 6 (GPIO3 & GND). This is optional.
+There is a feature that allows you to cycle between video modes (matrix or every single channel in full screen) if you press a button connected between pins 5 & 6 (GPIO3 & GND). This is optional.
 
 Setup
 -----
